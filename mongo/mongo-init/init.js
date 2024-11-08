@@ -1,12 +1,11 @@
 print("Ejecutando script de inicialización");
 db = db.getSiblingDB("ecommerce");
 
-// Para crear usuario de base de datos
-// db.createUser({
-//   user: "testdb",
-//   pwd: "12345",
-//   roles: [{ role: "readWrite", db: "ecommerce" }],
-// });
+db.createUser({
+  user: "ecommerce",
+  pwd: "qwerty",
+  roles: [{ role: "readWrite", db: "ecommerce" }],
+});
 
 print("Creando coleccion usuarios");
 db.createCollection("users");
