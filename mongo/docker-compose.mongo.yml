@@ -9,12 +9,3 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: ecommerce
       MONGO_INITDB_ROOT_PASSWORD: qwerty
-    volumes:
-      - mongo-data:/data/db
-      - mongo-config:/data/configdb
-
-volumes:
-  mongo-data:
-    driver: local
-  mongo-config:
-    driver: local
