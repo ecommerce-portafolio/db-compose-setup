@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   mongo:
@@ -9,3 +9,10 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: ecommerce
       MONGO_INITDB_ROOT_PASSWORD: qwerty
+    volumes:
+      - mongo-data:/data/db
+      - ./mongo-init:/docker-entrypoint-initdb.d
+
+volumes:
+  mongo-data:
+    driver: local
