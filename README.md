@@ -31,7 +31,7 @@ Actualmente, este repositorio incluye configuraciones para las siguientes bases 
 2. Navega al directorio de la base de datos que deseas levantar y ejecuta el comando:
 
    ```bash
-   docker-compose -f docker-compose.mongo.yml up -d
+   docker-compose -f mongo/docker-compose.mongo.yml up -d
    ```
 
 3. La base de datos estará disponible según la configuración del archivo `docker-compose.database.yml` correspondiente. Puedes cambiar las variables de entorno en cada archivo para personalizar la configuración (como usuario, contraseña y nombre de la base de datos).
